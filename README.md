@@ -14,8 +14,8 @@ implementation details has been ignored/changed because of the nature of Python 
 
   
 
--Merchant class has a fixed starting armor point (ap)and weapon point (wp). The constructor should optionally take the starting weapon point and starting armor point attributes.
-	
+-  Merchant class has a fixed starting armor point (ap)and weapon point (wp). The constructor should optionally take the starting weapon point and starting armor point attributes.
+
 	In other programming language, this could be solved by
 	keeping these variables as private, and make them accessible
 	only with the getter function. But Python does not have
