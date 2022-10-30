@@ -1,11 +1,14 @@
 from BaseFaction import Faction, Merchant
 
 
-class Orcs(Faction):
-    """ no __init__() at all here, use the parent's __init__ """
+# subclasses of the Faction class, from BaseFaction
+# seeing there first may help understand this classes easier.
 
-    def perform_attack(self, no_att_units1=0, att_pt1=0, no_att_units2=0,
-                       att_pt2=0):  # for all factions, all are zero by default, so no attack if conditions aren't satisfied
+class Orcs(Faction):
+    # no __init__() at all here, use the parent's __init__
+
+    def perform_attack(self, no_att_units1=0, att_pt1=0, no_att_units2=0, att_pt2=0):
+        # all are zero by default, so no attack if conditions aren't satisfied
         if self.enemy1.is_alive or self.enemy2.is_alive:
             if self.enemy1.is_alive:
                 no_att_units1 = self.no_units
@@ -35,12 +38,11 @@ class Orcs(Faction):
         return '“Stop running, you’ll only die tired!"\n' + super().__str__()
 
 
-#
 class Dwarves(Faction):
-    """ no __init__() at all here, use the parent's __init__ """
+    # no __init__() at all here, use the parent's __init__
 
     def perform_attack(self, no_att_units1=0, att_pt1=0, no_att_units2=0, att_pt2=0):
-
+        # all are zero by default, so no attack if conditions aren't satisfied
         if self.enemy1.is_alive or self.enemy2.is_alive:
             if self.enemy1.is_alive:
                 no_att_units1 = self.no_units
@@ -68,10 +70,10 @@ class Dwarves(Faction):
 
 
 class Elves(Faction):
-    """ no __init__() at all here, use the parent's __init__ """
+    # no __init__() at all here, use the parent's __init__
 
     def perform_attack(self, no_att_units1=0, att_pt1=0, no_att_units2=0, att_pt2=0):
-
+        # all are zero by default, so no attack if conditions aren't satisfied
         if self.enemy1.is_alive or self.enemy2.is_alive:
             if self.enemy1.is_alive:
                 no_att_units1 = self.no_units
